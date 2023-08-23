@@ -2,7 +2,7 @@
 // function components
 
 import React from "react";
-import UserInfo from "./UserInfor";
+import AddUserInfo from "./AddUserInfor";
 import DisplayInfor from "./DisplayInfor";
 
 class MyComponent extends React.Component {
@@ -26,14 +26,25 @@ class MyComponent extends React.Component {
             },
         ]
     }
+    //Xu li logic ben component cha- nhan data tu thang con gui ve
+    handleAddNewUser = (user) => {
+        this.setState({
+            listUsers: [...this.state.listUsers, user]
+        })
+    }
     //JSX
     render() {
 
         return (
             <div>
-                <UserInfo />
+                <AddUserInfo
+                    //Truyen tham chieu
+                    handleAddNewUser={this.handleAddNewUser}
+                />
                 <hr></hr>
-                <DisplayInfor listUsers={this.state.listUsers} />
+                <DisplayInfor
+                    listUsers={this.state.listUsers}
+                />
             </div>
         )
     }
