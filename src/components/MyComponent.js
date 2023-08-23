@@ -32,8 +32,6 @@ class MyComponent extends React.Component {
         return (
             <div>
                 <UserInfo />
-
-                <br></br>
                 <hr></hr>
                 <DisplayInfor listUsers={this.state.listUsers} />
             </div>

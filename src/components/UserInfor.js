@@ -3,7 +3,7 @@ import React from "react";
 class UserInfo extends React.Component {
 
     state = {
-        name: 'LoThiHoaiXuan',
+        name: 'Hoc ReactJs qua Project',
         address: 'Ho Chi Minh City',
         age: 26
     }
@@ -15,7 +15,6 @@ class UserInfo extends React.Component {
     }
     handleOnSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state)
     }
     render() {
         return (
