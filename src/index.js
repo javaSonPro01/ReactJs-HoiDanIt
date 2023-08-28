@@ -22,8 +22,9 @@ root.render(
           <Route index element={<HomePage />} />
 
           <Route path='users' element={<User />} />
-          <Route path='admins' element={<Admin />} />
         </Route>
+        <Route path='admins' element={<Admin />} />
+
       </Routes>
 
     </BrowserRouter>
